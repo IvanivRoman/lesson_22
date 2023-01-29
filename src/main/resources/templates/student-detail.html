@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Студент</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<header th:insert="~{blocks/header :: header}"></header>
+
+<div class="container mt-5">
+    <div th:each="stud : ${student}" class="alert alert-info mt-2">
+        <h3 th:text="${stud.name}"/>
+        <p th:text="${stud.email}"/>
+        <p th:text="${stud.id}"/>
+        <a th:href="'/students/' + ${stud.id} + '/edit'" class="btn btn-warning">Редагувати</a><br><br>
+        <form th:action="'/students/' +  ${stud.id}" method="post">
+            <button class="btn btn-warning" type="submit">Видалити</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

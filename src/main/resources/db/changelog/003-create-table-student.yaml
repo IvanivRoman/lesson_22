@@ -10,7 +10,6 @@ databaseChangeLog:
               - column:
                   name: id
                   type: bigint
-                  defaultValue: 0
                   constraints:
                     primaryKey:  true
                     nullable:  false
