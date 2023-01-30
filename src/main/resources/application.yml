@@ -1,6 +1,6 @@
 spring:
     datasource:
-        url: postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}
+        url: jdbc:postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}
         username: ${PGUSER}
         password: ${PGPASSWORD}
 
