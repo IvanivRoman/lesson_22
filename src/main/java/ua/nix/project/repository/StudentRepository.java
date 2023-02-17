@@ -6,5 +6,5 @@ import ua.nix.project.repository.entity.StudentEntity;
 
 @Repository
 public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
-
+    StudentEntity findStudentEntityByEmail(String email);
 }
